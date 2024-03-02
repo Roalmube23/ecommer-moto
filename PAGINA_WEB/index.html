@@ -2,127 +2,166 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/svg+xml" href="./images/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Carrito de Compras</title>
-
-    <!-- links de fuentes -->
+    <title>PLANET BIKER´S</title>
     <link rel="stylesheet" href="./index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <!--  -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&family=Quicksand:wght@300;500;700&family=Racing+Sans+One&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-<header id="header">
-    <h1>SUPER BIKE'S</h1>
-    <img class="carrito" src="./images (1).png" alt="carrito compras">
-</header>
-
-<div class="img_principal">
-    <div>
-        <h1 class="slogan">La libertad en dos ruedas</h1>
-    </div>
-</div>
-
-<div class="contenedor" id="contenedor">
-    <!-- <div>
-        <img src="./producto 1.jfif" alt="producto 1">
-        <div class="informacion">
-            <p>producto 1</p>
-            <p class="precio">199<span>.99</span></p>
-            <button class="comprar-btn">comprar</button>
-        </div>
-    </div>
-
-    <div>
-        <img src="./producto 2.jpg" alt="producto 2">
-        <div class="informacion">
-            <p>producto 1</p>
-            <p class="precio">199<span>.99</span></p>
-            <button class="comprar-btn">comprar</button>
-        </div>
-    </div>
-
-    <div>
-        <img src="./producto 3.jpg" alt="producto 3">
-        <div class="informacion">
-            <p>producto 1</p>
-            <p class="precio">199<span>.99</span></p>
-            <button class="comprar-btn">comprar</button>
-        </div>
-    </div>
-
-    <div>
-        <img src="./producto 4.jfif" alt="producto 4">
-        <div class="informacion">
-            <p>producto 1</p>
-            <p class="precio">199<span>.99</span></p>
-            <button class="comprar-btn">comprar</button>
-        </div>
-    </div>
-
-    <div>
-        <img src="./producto 5.jpg" alt="producto 5">
-        <div class="informacion">
-            <p>producto 1</p>
-            <p class="precio">199<span>.99</span></p>
-            <button class="comprar-btn">comprar</button>
-        </div>
-    </div>
-
-    <div>
-        <img src="./producto 6.jfif" alt="producto 6">
-        <div class="informacion">
-            <p>producto 1</p>
-            <p class="precio">199<span>.99</span></p>
-            <button class="comprar-btn">comprar</button>
-        </div>
-    </div>
-
+    <header>
+        <div class="header-section container">
+            <img class="logo" src="./images/png-transparent-motorcycle-bicycle-vehicle-specialty-text-bicycle-logo (1).svg" alt="">
+            <div>
+                <h1 id="TITTLE">PLANET BIKER´S</h1>
+            </div>
+            <div>
+                <img onclick="showCart(this)" class="cart" src="./images/464-4646442_carrito-de-compras-carro-de-compras-blanco-clipart.png" alt="">
+                <p class="count-product">0</p>
+            </div>
+            <div class="cart-products" id="products-id">
+                <p class="close-btn" onclick="closeBtn()">X</p>
+                <h3>Mi carrito</h3>
+                <div class="card-items">
+                    <!-- <div class="item">
+                        <img src="./images/products/keyboard-1.jpg" alt="">
+                        <div class="item-content">
+                            <h5>name of product name of product name of product</h5>
+                            <h5 class="cart-price">45.50$</h5>
+                            <h6>Amount: 3</h6>
+                        </div>
+                        <span>X</span>
+                    </div>
     
-    <div>
-        <img src="./producto 7.jpg" alt="producto 7">
-        <div class="informacion">
-            <p>producto 1</p>
-            <p class="precio">199<span>.99</span></p>
-            <button class="comprar-btn">comprar</button>
+                    <div class="item">
+                        <img src="./images/products/keyboard-1.jpg" alt="">
+                        <div class="item-content">
+                            <h5>name of product name of product name of product</h5>
+                            <h5 class="cart-price">45.50$</h5>
+                            <h6>Amount: 3</h6>
+                        </div>
+                        <span class="delete-product" data-id="">X</span>
+                    </div> -->
+                </div>
+                <h2>Total: $<strong class="price-total">0</strong></h2>
+            </div>
         </div>
-    </div>
-
-    
-    <div>
-        <img src="./producto 8.jfif" alt="producto 8">
-        <div class="informacion">
-            <p>producto 1</p>
-            <p class="precio">199<span>.99</span></p>
-            <button class="comprar-btn">comprar</button>
+    </header>
+    <section class="container">
+        <div class="products">
+            <div class="carts">
+                <div>
+                    <img src="./images/products/bmw_S1000-rr.jpg" alt="">
+                    <p><span>90.000.000</span>$</p>
+                </div>
+                <p class="title">BMW S100RR <br> Moto de la marca alemana de 1000cc</p>
+                <a href="" data-id="1" class="btn-add-cart">AÑADIR AL CARRITO</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./images/products/bmw_s1000rr.jpeg" alt="">
+                    <p><span>110.000.000</span>$</p>
+                </div>
+                <p class="title"> BMW S100RR <br> Moto de la marca alemana de 1000cc</p>
+                <a href="" class="btn-add-cart" data-id="2">AÑADIR AL CARRITO</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./images/products/Ducati_Panigale-V4-R.webp" alt="">
+                    <p><span>89.000.000</span>$</p>
+                </div>
+                <p class="title"> DUCATI PANIIGALE V4R <br> Moto de la marca ITALIANA de 1000cc</p>
+                <a href="" data-id="3" class="btn-add-cart">AÑADIR AL CARRITO</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./images/products/Honda_cbr1000rr.jpg" alt="">
+                    <p><span>68.000.000</span>$</p>
+                </div>
+                <p class="title"> HONDA CBR 1000RR <br> Moto de la marca NIPONA de 1000cc</p>
+                <a href="" data-id="4" class="btn-add-cart">AÑADIR AL CARRITO</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./images/products/kawasaki-ninja-zx10r.jpg" alt="">
+                    <p><span>59.000.000</span>$</p>
+                </div>
+                <p class="title"> KAWASAKI ZX10R <br> Moto de la marca NIPONA de 1000cc</p>
+                <a href="" data-id="5" class="btn-add-cart">AÑADIR AL CARRITO</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./images/products/kawasaki-ninja-zx10r_.jpg" alt="">
+                    <p><span>87.000.000</span>$</p>
+                </div>
+                <p class="title"> KAWASAKI ZX10R <br> Moto de la marca NIPONA de 1000cc</p>
+                <a href="" data-id="6" class="btn-add-cart">AÑADIR AL CARRITO</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./images/products/Suzuki_gsx-r1000r.jpg" alt="">
+                    <p><span>120.000.000</span>$</p>
+                </div>
+                <p class="title"> SUZUKI GSX-R 1000RR <br> Moto de la marca NIPONA de 1000cc</p>
+                <a href="" data-id="7" class="btn-add-cart">AÑADIR AL CARRITO</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./images/products/Aprilia_rsv4_1100_factory.jpg" alt="">
+                    <p><span>78.000.000</span>$</p>
+                </div>
+                <p class="title"> APRILLIA RSV4R <br> Moto de la marca ITALIANA de 1000cc</p>
+                <a href="" data-id="8" class="btn-add-cart">AÑADIR AL CARRITO</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./images/products/Ducati-1199-panigale.jpg" alt="">
+                    <p><span>84.000.000</span>$</p>
+                </div>
+                <p class="title"> DUCATI PANIIGALE 1199 <br> Moto de la marca ITALIANA de 1000cc</p>
+                <a href="" data-id="9" class="btn-add-cart">AÑADIR AL CARRITO</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./images/products/yamaha-R1M.webp" alt="">
+                    <p><span>89.000.000</span>$</p>
+                </div>
+                <p class="title"> YAMAHA R1 M <br> Moto de la marca NIPONA de 1000cc</p>
+                <a href="" data-id="10" class="btn-add-cart">AÑADIR AL CARRITO</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./images/products/Yamaha-yzf-r1.jpg" alt="">
+                    <p><span>78.000.000</span>$</p>
+                </div>
+                <p class="title"> YAMAHA R1 M <br> Moto de la marca NIPONA de 1000cc</p>
+                <a href="" data-id="11" class="btn-add-cart">AÑADIR AL CARRITO</a>
+            </div>
+            <div class="carts">
+                <div>
+                    <img src="./images/products/bimota_tesi_h2_carbo.jpg" alt="">
+                    <p><span>65.000.000</span>$</p>
+                </div>
+                <p class="title"> BIMOTA TESI H2 <br> Moto de la marca ITALIANA de 1000cc</p>
+                <a href="" data-id="11" class="btn-add-cart">AÑADIR AL CARRITO</a>
+            </div>
         </div>
-    </div>
+    </section>
 
-    
-    <div>
-        <img src="./producto 9.jfif" alt="producto 10">
-        <div class="informacion">
-            <p>producto 1</p>
-            <p class="precio">199<span>.99</span></p>
-            <button class="comprar-btn">comprar</button>
-        </div>
-    </div>
+    <footer>
+        <p class="author">🪐 by <a href="https://github.com/Roalmube23" target="_blank">AlexisM</a></p>
+    </footer>
 
-    <div>
-        <img src="./producto 10.jfif" alt="producto 10">
-        <div class="informacion">
-            <p>producto 1</p>
-            <p class="precio">199<span>.99</span></p>
-            <button class="comprar-btn">comprar</button>
-        </div>
-    </div> -->
-    <!-- Aquí van los otros productos -->
-</div>
+    <script>
+        function showCart(x){
+            document.getElementById("products-id").style.display = "block";
+        }
+        function closeBtn(){
+             document.getElementById("products-id").style.display = "none";
+        }
 
-<script src="index.js"></script>
+    </script>
+    <script src="./index.js" ></script>
 </body>
 </html>
