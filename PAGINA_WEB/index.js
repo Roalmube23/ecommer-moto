@@ -9,7 +9,7 @@ let buyThings = [];
 let totalCard = 0;
 let countProduct = 0;
 
-//functions
+//funciones
 loadEventListenrs();
 function loadEventListenrs(){
     allContainerCart.addEventListener('click', addProduct);
@@ -48,6 +48,7 @@ function deleteProduct(e) {
     loadHtml();
 }
 
+//funcion para sumar los vehiculos he imprimir los valores
 function readTheContent(product){
     const infoProduct = {
         image: product.querySelector('div img').src,
@@ -57,8 +58,8 @@ function readTheContent(product){
         amount: 1
     }
 
-    totalCard = parseFloat(totalCard) + parseFloat(infoProduct.price);
-    totalCard = totalCard.toFixed(2);
+    totalCard = parseInt(totalCard) + parseInt(infoProduct.price);
+    totalCard = totalCard;
 
     const exist = buyThings.some(product => product.id === infoProduct.id);
     if (exist) {
@@ -90,7 +91,7 @@ function loadHtml(){
             <div class="item-content">
                 <h5>${title}</h5>
                 <h5 class="cart-price">${price}$</h5>
-                <h6>Amount: ${amount}</h6>
+                <h6>Cantidad: ${amount}</h6>
             </div>
             <span class="delete-product" data-id="${id}">X</span>
         `;
@@ -102,6 +103,18 @@ function loadHtml(){
         amountProduct.innerHTML = countProduct;
     });
 }
+
+document.querySelector('.btn-98').addEventListener('click', vaciarCarrito);
+
  function clearHtml(){
     containerBuyCart.innerHTML = '';
  }
+
+function vaciarCarrito() {
+    buyThings = [];
+    totalCard = 0;
+    priceTotal.innerHTML='';
+    amountProduct.innerHTML='';
+    countProduct = 0;
+    loadHtml();
+}
