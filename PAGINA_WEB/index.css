@@ -198,3 +198,19 @@ footer{
     font-family: system-ui;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   }
+
+  /* ------------------------------ */
+
+  .btn-98 {
+    background-color: #006DA4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.btn-98:hover {
+    background-color: #005580;
+}
